@@ -33,7 +33,8 @@ const GenerateOTP = () => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
-						email: mail
+						email: mail,
+						time : new Date().toLocaleTimeString()
 					})
 				})
 				let res = await data.json();
@@ -44,7 +45,7 @@ const GenerateOTP = () => {
 					setLoading(false);
 					setTimeout(() => {
 						history.push('/verify');
-					}, 3000);
+					}, 2000);
 
 				}
 				else {

@@ -14,9 +14,6 @@ function App() {
 				<Route path='/' exact>
 					<GenerateOTP />
 				</Route>
-				<Route path='/generate' exact>
-					<GenerateOTP />
-				</Route>
 				<Route path='/verify' exact>
 					<VerifyOTP />
 				</Route>

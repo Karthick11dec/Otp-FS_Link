@@ -40,6 +40,7 @@ const VerifyOTP = () => {
 					},
 					body: JSON.stringify({
 						email: mail,
+						time: new Date().toLocaleTimeString(),
 						otp: Otp
 					})
 				})
@@ -49,8 +50,8 @@ const VerifyOTP = () => {
 					const M = window.M;
 					M.toast({ html: 'OTP Matched..!' });
 					setTimeout(() => {
-						window.location.replace("https://www.google.com/");
-					}, 3000);
+						history.push("/");
+					}, 2000);
 
 				}
 				else {
@@ -58,8 +59,8 @@ const VerifyOTP = () => {
 					const M = window.M;
 					M.toast({ html: `${res.message}..!` });
 					setTimeout(() => {
-						history.replace('/generate');
-					}, 3000);
+						history.push('/');
+					}, 2000);
 
 				}
 				setLoading(false);

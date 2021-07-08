@@ -5,7 +5,7 @@ const Navbar = () => {
 			<div className='navbar '>
 				<div className='row center'>
 					<div className='col s6'>
-						<Link to='/generate' className='nav-items teal-text lighten-2'>
+						<Link to='/' className='nav-items teal-text lighten-2'>
 							Generate OTP
 						</Link>
 					</div>
